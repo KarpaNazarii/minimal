@@ -1,0 +1,126 @@
+.header {
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    // .header__logo-text
+    &__logo-text {
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-size: 22px;
+        color: $black;
+    }
+    // .header__logo-img
+    &__logo-img {
+        vertical-align: middle;
+        padding-right: 18px;
+    }
+
+    // .header__nav-item
+    &__nav-item {
+        font-weight: 400;
+        margin-left: 34px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #404040;
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        border: none;
+        background-color: none;
+        border: 2px solid  transparent;
+        transition: border 0.3s linear, color 0.3s linear, background-color 0.3s linear;
+        padding: 1px;
+        border-radius: 10px;
+        &:hover{
+            border: 2px solid #404040;
+            border-radius: 10px;
+            color: white;
+            background-color: #404040;
+        }
+    }
+}
+
+.menu-btn {
+    margin-right: 20px;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+}
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+    background: white;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+.menu.active {
+	transform: translateX(0);
+}
+.menu li {
+	list-style-type: none;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 24px;
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #404040;
+        padding: 5px;
+        &:hover{
+            border-radius: 10px;
+            border:2px solid #404040;
+        }
+    }
+}
+
+
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+  }
+
+
+@media (min-width: 0px) and (max-width: 728px){
+    .header__nav{
+        display: none;
+    }  
+}
+
+@media (min-width: 728px) {
+    .menu-btn{
+        display: none;
+    } 
+}
+
+

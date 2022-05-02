@@ -1,0 +1,32 @@
+.sup-inner {
+    background-color: #FEFEC9;
+    background-size: cover;
+    font-family: 'Vollkorn', serif;
+    // .sup-inner__text
+    &__text {
+        padding-top: 60px;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+    }
+    // .sup-inner__btn
+    &__btn {
+        text-align: center;
+        padding-top: 39px;
+        padding-bottom: 60px;
+        a{
+            color: #47474F;
+            text-decoration: none;
+            padding: 13px 33px 20px;
+            border: 1px solid black;
+            background-color: transparent;
+            transition: 0.2s all ease-in-out;
+
+            &:hover{
+                background-color: #47474F;
+                color: white;
+            }
+        }
+    }
+}
+

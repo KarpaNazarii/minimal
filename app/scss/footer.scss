@@ -1,0 +1,100 @@
+.footer {
+    text-align: center;
+    background-color: black;    
+    // .footer__form
+    &__form {
+        padding-top: 69px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    //.footer__form-inputs
+    &__form-inputs{
+        input{
+            border: none;
+            width: 564px;
+            // Unstyle the caret on <select>s in IE10+.      
+            &::-ms-expand {         
+                background-color: transparent;         
+                border: 0;     
+            }      
+            &:-moz-focusring {         
+                color: transparent;        
+                //text-shadow: 0 0 0 $input-color;     
+            }      
+            &::placeholder {         
+            color: #c4c4c4;         // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+            opacity: 1;     
+        }      
+            &:-moz-placeholder {         
+                color: #c4c4c4;     
+            }     
+            &::-moz-placeholder {          
+                color: #c4c4c4;     
+            }     
+            &:-ms-input-placeholder {          
+                color: #c4c4c4;     
+            }     
+            &::-webkit-input-placeholder {         
+                color: #c4c4c4;     
+            }
+            &:first-child{
+                height: 57px;
+                background-color: #FFFFFF;
+                opacity: 18%;
+            }
+            &:nth-child(2){
+                height: 57px;
+                background-color:#FFFFFF;
+                opacity: 20%;
+            }
+            &:nth-child(3){
+                height: 57px;
+                background-color: #FFFFFF;
+                opacity: 18%;
+            }
+            
+            &:nth-child(4){
+                height: 127px;
+                background-color:#FFFFFF;
+                opacity: 20%;
+            }
+        }
+    }
+    // .footer__btn
+    &__btn {
+        padding-top: 38px;
+        a{
+            text-decoration: none;
+            font-style: italic;
+            border: 1px solid #7EC4BD;
+            padding: 15px 60px;
+            color: #8BCAC3;
+        }
+    }
+    // .footer__logo
+    &__logo {
+        padding-top: 37px;
+    }
+    // .footer__text
+    &__text {
+        font-size: 15px;
+        font-family: 'Vollkorn', serif;
+        color: #FFFFFF;
+        opacity: 40%;
+        padding-top: 14px;
+        padding-bottom: 75px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 940px){
+    .footer__form-inputs input{
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+        }
+    .footer__form{
+        align-items: center;
+    }
+}
+
